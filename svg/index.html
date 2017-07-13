@@ -1,0 +1,722 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../css/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="../css/jquery.dataTables.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+    <![endif]-->
+
+    <!-- Table of Contents          Keyword (use ctl+f)
+        1. Simple Example             $ex1
+        2. Using as an <img>          $img
+        3. Using as an <embed>        $embed
+        4. Using as an <object>       $object
+    -->
+
+</head>
+
+<body>
+<!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    
+
+<header id="top">
+    
+    <div class="jumbotron">
+
+        <section class="container">
+
+            <div class="row  push-down">
+                
+                <div class="col-xs-2  hero-image  hidden-sm">
+                    <img src="../img/UPSLogo.svg" 
+                        type="image/svg+xml"
+                        width="100%" />  <!-- for IE11! -->
+                </div>
+
+                <div class="col-xs-10  text-left">
+                    <h1>SVG</h1>
+                    <h1 class="muted"><small>An introduction to data presentations</small></h1>
+                </div>
+                
+            </div> <!-- row  push-down -->
+
+            <div class="row">
+                <p class="lead">SVG, or Scalable Vector Graphics, is an XML-based vector image format. It has been an open standard, developed by the W3C since 1999, yet it is still relatively unknown. Because it is derived from XML, the images, and their corresponding behaviors, can be controlled by CSS and Javascript. And while SVG is relatively simple in theory, some imagination along with the animation, container, gradient, and graphical elements your images can be as complex and flexible as you need.
+                </p>
+                <a href="https://www.w3.org/TR/SVG/Overview.html">W3C SVG</a>
+            </div>
+
+        </section> <!-- container -->
+
+    </div>
+
+</header> <!-- header #top-->
+
+
+<main class="container-fluid">
+
+   
+   
+    <div class="col-md-9" role="main">
+
+            <!-- $simple shapes -->
+            <h1 class="page-header" id="simple">The Simple Shapes, inline</h1>
+                <p class="lead">The simples shapes are <code>rect</code>  <code>circle</code>  <code>ellipse</code>  <code>line</code>  <code>polyline</code> and <code>polygon</code>
+                </p>
+                <h4>See also:
+                    <ul>
+                        <li><a href="https://www.w3.org/TR/SVG/shapes.html">W3C Shapes</a>
+                        </li>
+                        <li><a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#object">An SVG Primer</a>
+                        </li>
+                    </ul>
+                <h4>
+                    
+                <h2 id="examples__simple">Examples</h2>
+                
+                <section class="row">
+
+                    <div class="col-md-2  col-sm-3  col-xs-6">
+                        <svg width="100%" height="100%">
+                            <rect x="0" y="0" width="200px" height="40px" />
+                        </svg>
+                    </div>
+
+                    <div class="col-md-2  col-sm-3  col-xs-6">
+                        <svg width="100%" height="100%">
+                            <circle cx="75" cy="75" r="65" fill="red" />
+                        </svg>
+                    </div>
+
+                    <div class="col-md-2  col-sm-3  col-xs-6">
+                        <svg width="100%" height="100%">
+                            <ellipse cx="75" cy="75" rx="35" ry="65" fill="brown" />
+                        </svg>
+                    </div>
+
+                    <div class="col-md-6  col-xs-12">
+                        <svg width="12cm" height="4cm" viewBox="0 0 1200 400">
+                            <!-- lines -->
+                            <desc>Example lines expressed in user coordinates</desc>
+
+                            <g stroke="green">
+                                <line x1="100" y1="300" x2="300" y2="100" stroke-width="5"></line>
+                                <line x1="300" y1="300" x2="500" y2="100" stroke-width="10"></line>
+                                <line x1="500" y1="300" x2="700" y2="100" stroke-width="15"></line>
+                                <line x1="700" y1="300" x2="900" y2="100" stroke-width="20"></line>
+                                <line x1="900" y1="300" x2="1100" y2="100" stroke-width="25"></line>
+                            </g>
+                        </svg>
+                    </div> <!-- col-md-6  col-xs-12 -->
+
+                    <div class="col-md-6  col-xs-12">
+                        <!-- $polyline --> 
+                        <svg width="12cm" height="4cm" viewBox="0 0 1200 400">
+                            <desc>Example polyline - increasingly larger bars</desc>
+
+                            <polyline fill="none" stroke="blue" stroke-width="10" 
+                                        points="50,375
+                                                150,375 150,325 250,325 250,375
+                                                350,375 350,250 450,250 450,375
+                                                550,375 550,175 650,175 650,375
+                                                750,375 750,100 850,100 850,375
+                                                950,375 950,25 1050,25 1050,375
+                                            1150,375" />
+                        </svg>
+                    </div> <!-- col-md-6  col-xs-12 -->
+
+                    <div class="col-md-6  col-xs-12">
+                        <!-- $Polygon -->
+                        <svg width="12cm" height="4cm" viewBox="0 0 1200 400">
+                            <desc>Example polygons - star and hexagon</desc>
+
+                            <polygon 	fill 		= "red" 
+                                        stroke 		= "blue" 
+                                        stroke-width= "10" 
+                                        points 		= "350,75  379,161 469,161 397,215
+                                                    423,301 350,250 277,301 303,215
+                                                    231,161 321,161" 
+                            />
+
+                            <polygon 	fill 		= "lime" 
+                                        stroke 		= "blue" 
+                                        stroke-width= "10" 
+                                        points 		= "850,75  958,137.5 958,262.5
+                                                    850,325 742,262.6 742,137.5" 
+                            />
+                        </svg>
+                    </div> <!-- col-md-6  col-xs-12 -->
+
+                </section> <!-- row -->
+
+
+                <section class="row">
+
+                    <h2 id="usage__simple">Usage</h2>
+                    <p>Start by using an <code>&lt;svg&gt;</code>tag. <code>&lt;svg&gt;</code> is similar to <code>&lt;div&gt;</code>, but for simple graphics such as logos, charts, etc.
+                    </p>
+
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                        <span class="label  label-info">heads up!</span>
+                            In theory, the svg canvas is infinite, it is a good idea to place a <em><b>width</b></em> and <em><b>height</b></em> attribute on it!
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6  col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    
+                                    <svg width="100%" height="100%">
+                                        <rect x="0" y="15" width="500px" height="125px" fill="darkgray" />
+                                    </svg>
+                                
+                                </div>
+                                <div class="panel-body">
+                                    <pre>
+                                        <code class="language-html" data-lang="html">
+&lt;svg width="100%" height="100%"&gt;
+  &lt;rect x="0" y="15" width="500px" height="125px" fill="darkgray" /&gt;
+    &lt;/svg&gt;</code>
+                                    </pre>
+                                </div> <!-- panel-body -->
+                            </div> <!-- panel panel-default -->
+
+                        </div> <!-- col-md-6  col-xs-12 -->
+
+                        <div class="col-md-6  col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    
+                                    <svg width="100%" height="100%">
+                                    
+                                        <circle cx="24%" cy="75" r="65" fill="red" />
+                                        <ellipse cx="75%" cy="75" rx="35" ry="65" fill="brown" />
+                                    
+                                    </svg>
+                                
+                                </div>
+                                <div class="panel-body">
+                                    <pre>
+                                        <code class="language-html" data-lang="html">
+&lt;svg width="100%" height="100%"&gt;
+    
+    &lt;circle cx="75" cy="75" r="65" fill="red" /&gt;
+    &lt;ellipse cx="75%" cy="75" rx="35" ry="65" fill="brown" /&gt;
+
+&lt;/svg&gt;</code>
+                                </pre>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel panel-default -->
+
+                    </div> <!-- col-md-6  col-xs-12 -->
+
+                </div> <!-- row -->
+
+
+                 <div class="row">
+
+                    <div class="col-md-6  col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                
+                                 <svg width="12cm" height="4cm" viewBox="0 0 1200 400">
+                                    <desc>Example lines expressed in user coordinates</desc>
+
+                                    <g stroke="green">
+                                        <line x1="100" y1="300" x2="300" y2="100" stroke-width="5"></line>
+                                        <line x1="300" y1="300" x2="500" y2="100" stroke-width="10"></line>
+                                        <line x1="500" y1="300" x2="700" y2="100" stroke-width="15"></line>
+                                        <line x1="700" y1="300" x2="900" y2="100" stroke-width="20"></line>
+                                        <line x1="900" y1="300" x2="1100" y2="100" stroke-width="25"></line>
+                                    </g>
+                                </svg>
+                            
+                            </div>
+                            <div class="panel-body">
+                                <pre>
+                                    <code class="language-html" data-lang="html">
+&lt;svg width="12cm" height="4cm" viewBox="0 0 1200 400"&gt;
+  &lt;g stroke="green"&gt;
+    &lt;line x1="100" y1="300" x2="300" y2="100" stroke-width="5">
+    &lt;/line&gt;
+    &lt;line x1="300" y1="300" x2="500" y2="100" stroke-width="10">
+    &lt;/line&gt;
+    &lt;line x1="500" y1="300" x2="700" y2="100" stroke-width="15">
+    &lt;/line&gt;
+    &lt;line x1="700" y1="300" x2="900" y2="100" stroke-width="20">
+    &lt;/line&gt;
+    &lt;line x1="900" y1="300" x2="1100" y2="100" stroke-width="25">
+    &lt;/line&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</code>
+                                </pre>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel panel-default -->
+
+                    </div> <!-- col-md-6  col-xs-12 -->
+
+                    <div class="col-md-6  col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                
+                               <svg width="12cm" height="4cm" viewBox="0 0 1200 400">
+                                    <desc>Example polyline - increasingly larger bars</desc>
+
+                                    <polyline fill="none" stroke="blue" stroke-width="10" 
+                                                points="50,375
+                                                        150,375 150,325 250,325 250,375
+                                                        350,375 350,250 450,250 450,375
+                                                        550,375 550,175 650,175 650,375
+                                                        750,375 750,100 850,100 850,375
+                                                        950,375 950,25 1050,25 1050,375
+                                                    1150,375" />
+                                </svg>
+
+                               
+                            
+                            </div>
+                            <div class="panel-body">
+                                <pre>
+                                    <code class="language-html" data-lang="html">
+&lt;svg width="12cm" height="4cm" viewBox="0 0 1200 400"&gt;
+
+  &lt;polyline   fill="none" 
+                 stroke="blue" 
+                 stroke-width="10" 
+                 points="50,375
+                  150,375 150,325 250,325 250,375
+                  350,375 350,250 450,250 450,375
+                  550,375 550,175 650,175 650,375
+                  750,375 750,100 850,100 850,375
+                  950,375 950,25 1050,25 1050,375
+                  1150,375" 
+  /&gt;
+&lt;/svg&gt;</code>
+                                </pre>
+                            </div> <!-- panel-body -->
+                        </div> <!-- panel panel-default -->
+
+                    </div> <!-- col-md-6  col-xs-12 -->
+
+                </div> <!-- row -->
+
+            </section> <!-- row -->
+
+
+
+            <section class="row" id="external">
+
+                <h1 class="page-header">Including SVG's from External Sources</h1>
+                <p class="lead">While you can code SVG inline, it is much better practice to include it in a seperate file, much like you would CSS or Javascript
+                    there are a few different ways, and each has its advantages and drawbacks, but the <code>&lt;object&gt;</code> tag is considered the best practice
+               </p>
+               <h4>
+                See also:
+                <ul>
+                    <li><a href="https://www.w3.org/TR/SVG/shapes.html">W3C Shapes</a>
+                    </li>
+                    <li><a href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#object">An SVG Primer</a>
+                    </li>
+                </ul>
+                </h4>
+           
+                <h2 id="examples__sources">Types of Sources</h2>
+                <p>These include: <code>&lt;img&gt;</code>,<code> &lt;object&gt;</code>,<code> &lt;embed&gt;</code>, and the <code> &lt;iframe&gt; tags</code>
+
+            </section> <!-- row -->
+
+
+            <section class="row" id="usage__sources">
+
+                <!-- row -->
+                <div class="col-md-6  col-xs-12">
+                    
+                    <div class="panel panel-default">
+                          <div class="panel-heading">
+                                <h3 class="panel-title"><pre><code>&lt;image src="image.svg" /&gt;</code></pre></h3>
+                          </div>
+                          <div class="panel-body">
+                              <span class="label label-danger">Heads up!</span>
+                                This is not preferred, or recommended by the w3c.. it is not compliant across all browsers, and cannot be manipulated by SMIL, CSS or Javascript!
+                          </div>
+                    </div>
+                    
+                </div>
+
+                <!-- $embed -->
+                <div class="col-md-6  col-xs-12">
+                    
+                    <div class="panel panel-default">
+                          <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <pre><code class="language-html" data-lang="html">
+&lt;embed src="chart.svg" type="image/svg+xml" width="66%" /&gt;</code></pre></h3>
+                          </div>
+                          <div class="panel-body">
+                              <span class="label label-danger">Heads up!</span>
+                                This is not preferred, or recommended by the w3c.. it is not compliant across all browsers, and cannot be manipulated by SMIL, CSS or Javascript!
+                          </div>
+                    </div>
+                    
+                </div>
+
+
+                <!-- $iframe -->
+                <div class="col-md-6  col-xs-12">
+                    
+                    <div class="panel panel-default">
+                          <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <pre>
+                                    <code class="language-html" data-lang="html">
+&lt;iframe src="images/JSLogo.svg" 
+           scrolling="no" 
+           style="border: none"&gt;
+    &lt;-- older browser fall back! --&gt;
+    &lt;img src="images/JSLogo.png" alt="Fallback image" /&gt;
+&lt;/iframe&gt;</code>
+                                </pre></h3>
+                          </div>
+                          <div class="panel-body">
+                              <span class="label label-danger">Heads up!</span>
+                              While we are afforded a fall back, it can be quite tricky to script for an iframe.
+                              Furthermore, this tag has never been formally approved, although approval is coming soon.
+                              It is also very dependent heavy, and you can get different results depending upon the browser
+                          </div>
+                    </div>
+                    
+                </div>
+
+
+                <!-- $object -->
+                <div class="col-md-6  col-xs-12">
+                    
+                    <div class="panel panel-default">
+                          <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <pre>
+                                    <code class="language-html" data-lang="html">
+&lt;object id="object-image" 
+        type="image/svg+xml" 
+        data="images/MSLogo.svg"
+        width="75%" 
+&gt;
+
+    &lt;!-- this is for IE, and allows for full scripting capabilities in all 5 major browsers --&gt;
+    &lt;param name="src" value="images/MSLogo.svg"&gt;
+&lt;/object&gt;</code>
+                            </pre></h3>
+                            </div>
+                        <div class="panel-body">
+                            <span class="label label-info">Heads up!</span>
+                            This is the preferred and recommended way to embed an svg tag, and its use affords certain advantages:
+                            <ul>
+                                <li>Fall back for older browsers</li>
+                                <li>Supported by all major browsers</li>
+                                <li>perfect for hooking into CSS and javascript</li>
+                                <li>if it must be animated, it must be <code>&lt;object&gt;</code> or an <code>&lt;iframe&gt;</code> (yuck!)</li>
+                            <ul>
+                        </div>
+                    </div>
+                    
+                </div> <!-- col-md-6  col-xs-12 -->
+
+            </section> <!-- row -->
+
+
+            
+            <section class="row">
+
+
+                <h1 class="page-header" id="container-elements">Container Elements</h1>
+
+                <p class="lead">SVG includes a host of container elements for use in graphics of all kinds. They are the building blocks of SVG, they are 
+                    <code>&lt;a&gt;</code>  <code>&lt;defs&gt;</code>  <code>&lt;g&gt;</code>  <code>&lt;marker&gt;</code>  <code>&lt;mask&gt;</code>  <code>&lt;missing-glyph&gt;</code>  <code>&lt;pattern&gt;</code> <code>&lt;switch&gt;</code> and <code>&lt;symbol&gt;</code>
+                </p>
+                
+
+                <h2>Element Descriptions <small>These are just a few, for a full list, click <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element#Container_elements">here</a></small></h2>
+
+                        <!-- $g -->
+                        <div class="panel panel-default" id="container_g">
+
+                            <div class="panel-heading">
+                                <h3><code>&lt;g&gt;</code></h3>
+                                
+                                <p> The ‘g’ element is a container element for grouping together related graphics elements. If a graphical element is <em>not</em> contained in a grouping it is conceptually reagarded to be in its own group.
+                                </p>                    
+                            </div>
+                            
+                            <div class="panel-body">
+
+                                <div class="col-md-6  col-sm-12">
+                                    <pre>
+                                        <code class="language-html" data-lang="html">
+&lt;svg width="500" height="275" viewBox="0 0 95 50""&gt;
+
+  &lt;g stroke="green" fill="white" stroke-width="5"&gt;
+    &lt;circle cx="25" cy="25" r="15"/&gt;
+    &lt;circle cx="40" cy="25" r="15"/&gt;
+    &lt;circle cx="55" cy="25" r="15"/&gt;
+    &lt;circle cx="70" cy="25" r="15"/&gt;
+  &lt;/g&gt;
+
+&lt;/svg&gt;</code>
+                                    </pre>
+                                
+                                    <a href="https://www.w3.org/TR/SVG11/struct.html#Groups" class="btn btn-info" role="button" target="blank">More Info</a>
+                                    
+                                </div>
+
+                                <div class="col-md-6  col-sm-12">
+
+                                    <svg width="500" height="275" viewBox="0 0 95 50" xmlns="http://www.w3.org/2000/svg">
+                                        <g stroke="green" fill="white" stroke-width="5">
+                                            <circle cx="25" cy="25" r="15"/>
+                                            <circle cx="40" cy="25" r="15"/>
+                                            <circle cx="55" cy="25" r="15"/>
+                                            <circle cx="70" cy="25" r="15"/>
+                                        </g>
+                                    </svg>     
+                                </div>
+
+                            </div> <!-- panel-body -->
+
+                        </div> <!-- panel panel-default -->
+
+
+
+
+
+                        <!-- $defs -->
+                        <div class="panel panel-default" id="container_defs">
+
+                            <div class="panel-heading">
+                                <h3><code>&lt;defs&gt;</code></h3>
+
+                                <p>SVG allows graphical objects to be defined for later reuse. It is recommended that, wherever possible, referenced elements be defined inside of a <code>&lt;defs&gt;</code> element. Defining these elements inside of a <code>&lt;defs&gt;</code> element promotes understandability of the SVG content and thus promotes accessibility. Graphical elements defined in a <code>&lt;defs&gt;</code> element will not be directly rendered. You can use a <code>&lt;use&gt;</code> element to render those elements wherever you want on the viewport.                                
+                                </p>                    
+                            </div>
+                            
+                            <div class="panel-body">
+
+                                <div class="col-md-6  col-sm-12">
+                                    <pre>
+                                        <code class="language-html" data-lang="html">
+&lt;svg width="500" height="275" viewBox="0 0 500 275"&gt;
+
+  &lt;defs&gt;
+    &lt;linearGradient id="Gradient01"&gt;
+      &lt;stop offset="20%" stop-color="#39F" /&gt;
+      &lt;stop offset="90%" stop-color="#F3F" /&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+
+  &lt;rect x="10" y="10" width="500" height="200" 
+    fill="url(#Gradient01)" /&gt;
+
+&lt;/svg&gt;</code>
+                                    </pre>
+
+                                    <a href="https://www.w3.org/TR/SVG11/struct.html#Head" class="btn btn-info" role="button" target="blank">More Info</a>
+
+                                </div>
+
+                                <div class="col-md-6  col-sm-12">
+
+                                    <svg width="500" height="275" viewBox="0 0 500 275" xmlns="http://www.w3.org/2000/svg">
+
+                                    <defs>
+                                        <linearGradient id="Gradient01">
+                                        <stop offset="20%" stop-color="#39F" />
+                                        <stop offset="90%" stop-color="#F3F" />
+                                        </linearGradient>
+                                    </defs>
+
+                                    <rect x="10" y="10" width="500" height="200" 
+                                            fill="url(#Gradient01)" />
+                                    </svg>
+                                
+                                </div>
+                                <br>
+                                 
+                               
+                            </div> <!-- panel-body -->
+
+                        </div> <!-- panel panel-default -->
+
+
+
+
+
+
+                        <!-- $symbol -->
+                        <div class="panel panel-default" id="container_symbol">
+
+                            <div class="panel-heading">
+                                <h3><code>&lt;symbol&gt;</code></h3>
+
+                                <p>The <code>&lt;symbol&gt;</code> element is used to define graphical template objects which can be instantiated by a <code>&lt;use&gt;</code> element. The use of symbol elements for graphics that are used multiple times in the same document adds structure and semantics. Documents that are rich in structure may be rendered graphically, as speech, or as Braille, and thus promote accessibility. Note that a symbol element itself is not rendered. Only instances of a symbol element (i.e., a reference to a symbol by a <code>&lt;use&gt;</code> element) are rendered.
+                                </p>                    
+                            </div>
+                            
+                            <div class="panel-body">
+
+                                <div class="col-md-10  col-sm-12">
+                                    <pre>
+                                        <code class="language-html" data-lang="html">
+&lt;svg width="500" height="275" viewBox="0 0 500 275"&gt;
+
+  &lt;symbol id="sym01" viewBox="0 0 150 110"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red"/&gt;
+    &lt;circle cx="90" cy="60" r="40" stroke-width="8" stroke="green" fill="white"/&gt;
+  &lt;/symbol&gt;
+
+  &lt;!-- actual drawing by "use" element --&gt;
+  &lt;use href="#sym01" x="0" y="0" width="100" height="50"/&gt;
+  &lt;use href="#sym01" x="0" y="50" width="75" height="38"/&gt;
+  &lt;use href="#sym01" x="0" y="100" width="50" height="25"/&gt;
+
+&lt;/svg&gt;</code>
+                                    </pre>
+
+                                    <a href="https://www.w3.org/TR/SVG11/struct.html#SymbolElement" class="btn btn-info" role="button" target="blank">More Info</a>
+
+
+                                </div>
+
+                                <div class="col-md-2  col-sm-12">
+
+                                    <svg width="120" height="140">
+
+                                        <!-- symbol definition  NEVER draw -->
+                                        <symbol id="sym01" viewBox="0 0 150 110">
+                                            <circle cx="50" cy="50" r="40" stroke-width="8" stroke="red" fill="red"/>
+                                            <circle cx="90" cy="60" r="40" stroke-width="8" stroke="green" fill="white"/>
+                                        </symbol>
+
+                                        <!-- actual drawing by "use" element -->
+                                        <use href="#sym01" x="0" y="0" width="100" height="50"/>
+                                        <use href="#sym01" x="0" y="50" width="75" height="38"/>
+                                        <use href="#sym01" x="0" y="100" width="50" height="25"/>
+
+                                    </svg>
+
+                                </div>
+
+                            </div> <!-- panel-body -->
+
+                        </div> <!-- panel panel-default -->
+                        
+
+              
+            </section> <!-- row -->
+
+
+            <!-- $tools -->
+            <section class="row">
+
+                <h1 class="page-header" id="tools">Helpful Tools</h1>
+
+                <h2>Software</h2>
+                
+                <div class="col-lg-4   col-md-6  col-xs-1">
+
+                    <h4>Adobe Illustrator</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+
+                </div>
+
+                <div class="col-lg-4   col-md-6  col-xs-1">
+
+                    <h4>Inkscape</h4>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+
+                </div>
+
+                <div class="col-lg-4   col-md-6  col-xs-1">
+
+                    <h4>Aviary</h4>
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                    <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
+
+                </div>
+            
+            </section> <!-- row -->
+
+
+        </div> <!-- class="col-md-9" role="main" -->
+
+
+        <!-- sidebar -->
+        <nav class="col-md-3 hidden-print  hidden-sm  hidden-xs" 
+             id="myScrollspy" 
+             role="navigation">
+
+            <ul class="nav">
+
+                <li class="active"><a href="#simple">The Available Shapes</a></li>
+                <li><a href="#examples__simple">Examples</a></li>
+                <li><a href="#usage__simple">Usage</a></li>                        
+                <li><a href="#external">External Sources</a></li>
+                <li><a href="#usage__sources">Usage</a></li>
+                <li><a href="#container-elements">Container Elements</a></li>
+                <li><a href="#container_g">&lt;g&gt;</a></li>
+                <li><a href="#container_defs">&lt;defs&gt;</a></li>
+                <li><a href="#container_symbol">&lt;symbol&gt;</a></li>
+
+                <a href="#top" class="back-to-top">Back to top</a>
+                
+            </ul>
+
+
+        </nav> <!-- aside col-md-3 hidden-print  hidden-sm  hidden-xs -->
+
+    
+
+</main>
+
+  <!-- JS Files -->
+<script src="../js/vendor/jquery-3.2.1.js"></script>
+<script src="../js/vendor/bootstrap.js"></script>
+<script src="../js/main.js"></script>
+
+<script>
+
+    $(function(){
+    
+        /* set the scrollspy */
+        $( 'body' ).scrollspy({ target: '#myScrollspy' });
+
+        /* affix the scrollspy nav to the top, offset by 500px */
+        $( '.nav' ).affix({ offset: { top: 500 } });
+
+    });
+
+</script>
+</body>
+</html>

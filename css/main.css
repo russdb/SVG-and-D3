@@ -1,0 +1,34 @@
+body {
+    position: relative;
+}
+.nav.affix-top {
+    position: static;
+    
+    
+}
+
+.push-down {
+    margin-bottom: 45px;
+}
+
+    .push-down__large {
+        margin-bottom: 70px;
+    }
+
+.nav.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+}
+
+
+li.active,
+li.active:hover, 
+li.active:focus  {
+	background: #9CF;
+}
+li.active a,
+li.active:hover a, 
+li:focus a  {
+	color: #FFF;
+}
